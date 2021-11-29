@@ -176,6 +176,8 @@ class PDFKit(object):
             )
         else:
             result = subprocess.Popen(
+                'xvfb-run',
+                '-a',
                 args,
                 stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
